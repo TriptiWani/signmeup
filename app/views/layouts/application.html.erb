@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SignmeupApp</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%#= cloudinary_js_config %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Sign Me Up!</a>
+        <%= link_to 'Speech -> Text -> Signs', root_path , :class => 'navbar-brand'%>
+        <%= link_to 'Text -> Speech', text_to_speech_path  , :class => 'navbar-brand'%>
+    </div>
+    <!-- /.navbar-header -->
+
+
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li>
+                    <a href="#"><i class="glyphicon glyphicon-question-sign"></i> <span>FAQ</span></a>
+                    <a href="#"><i class="glyphicon glyphicon-info-sign"></i> <span>About us</span></a>
+                      <%= link_to '<i class="glyphicon glyphicon-plus"></i> Add video'.html_safe, new_video_path %>
+                      <%= link_to '<i class="glyphicon glyphicon-facetime-video"></i> All videos'.html_safe, videos_path %>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="content">
+    <%= yield %>
+</div>
+  </body>
+</html>

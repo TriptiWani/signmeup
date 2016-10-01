@@ -1,0 +1,20 @@
+.content{
+  padding:0 15px;
+}
+@media (min-width: 768px){
+  .sidebar{
+  z-index: 1;
+  position: absolute;
+  width: 250px;
+  margin-top: 51px;
+  }
+
+  .content{
+
+      position: inherit;
+      margin: 0 0 0 250px;
+      padding: 0 30px;
+      border-left: 1px solid #e7e7e7;
+  }
+
+}

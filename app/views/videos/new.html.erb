@@ -1,0 +1,12 @@
+<%= form_for  @video,:html => {:multipart => true} do |f| %>
+  <fieldset>
+    <%= f.label :sign_for%>
+    <%= f.text_field :sign_for%>
+  </fieldset>
+
+  <fieldset>
+      <%= f.label :url %>
+      <%= cl_upload_tag(:url,options={}) %>
+  </fieldset>
+  <%= f.submit %>
+<% end %>
