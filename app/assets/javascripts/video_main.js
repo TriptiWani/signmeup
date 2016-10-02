@@ -13,7 +13,7 @@ $(document).ready(function(){
       $('.video').show();
       // const search = $('[name="search"]').val().toLowerCase();
       var search = $('[name="search"]').val().toLowerCase();
-      // currentIndex = 0;
+      currentIndex = 0;
       // words = search.split(" ").filter(key => dic.indexOf(key) >= 0);
       $.ajax({
         url: '/search_video',
