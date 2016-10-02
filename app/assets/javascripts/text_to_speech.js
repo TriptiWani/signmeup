@@ -26,7 +26,7 @@ function populateVoiceList() {
 
   for(i = 0; i < voices.length ; i++) {
     // var option = document.createElement('option');
-    var $option = $('option');
+    var $option = $('.languages option');
     $option.html(voices[i].name + ' (' + voices[i].lang + ')');
 
     if(voices[i].default) {

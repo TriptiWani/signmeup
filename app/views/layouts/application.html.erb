@@ -19,8 +19,10 @@
             <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">Sign Me Up!</a>
-        <%= link_to 'Speech -> Text -> Signs', root_path , :class => 'navbar-brand'%>
-        <%= link_to 'Text -> Speech', text_to_speech_path  , :class => 'navbar-brand'%>
+    </div>
+    <div class="navbar-header">
+      <%= link_to 'Speech -> Text -> Signs', root_path , :class => 'navbar-brand'%>
+      <%= link_to 'Text -> Speech', text_to_speech_path  , :class => 'navbar-brand'%>
     </div>
     <!-- /.navbar-header -->
 
@@ -38,7 +40,7 @@
         </div>
     </div>
 </nav>
-<div class="content">
+<div class="content" style="padding-top: 20px">
     <%= yield %>
 </div>
   </body>
