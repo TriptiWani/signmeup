@@ -6,8 +6,8 @@
 
   <fieldset>
       <%= f.label :url %>
-      <!-- <%#= cl_upload_tag(:url,options={}) %> -->
-      <%= file_field_tag("videos[]", :multiple => true ) %>
+      <%= cl_upload_tag(:url,options={}) %>
+      <!-- <%= file_field_tag("videos[]", :multiple => true ) %> -->
   </fieldset>
   <%= f.submit %>
 <% end %>

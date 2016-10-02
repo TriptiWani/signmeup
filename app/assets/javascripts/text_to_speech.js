@@ -5,8 +5,8 @@ var $inputForm = $('.speech-synthesiser');
 // var inputTxt = document.querySelector('.txt');
 var $inputTxt = $('.txt');
 // var voiceSelect = document.querySelector('select');
-var $voiceSelect = $('select');
-var $selectedOption = $('select option');
+var $voiceSelect = $('.languages');
+var $selectedOption = $('.languages option');
 
 
 // var pitch = document.querySelector('#pitch');
@@ -40,7 +40,7 @@ function populateVoiceList() {
   }
 }
 
-populateVoiceList();
+// populateVoiceList();
 if (speechSynthesis.onvoiceschanged !== undefined) {
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
