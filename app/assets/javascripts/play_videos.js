@@ -1,4 +1,4 @@
-let currentIndex = 0;
+var currentIndex = 0;
 let words = new Array();
 let text_content = new Array();
 
