@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+  $('.dropdown').fadeIn();
   $('.speak-button').on('click',function(){
     console.log('clicked speak');
     recognition.start();
@@ -56,5 +56,8 @@ $(document).ready(function(){
     }
 
     $('.txt').val('');
+  });
+  $('set_rate').on('click',function(e){
+    console.log('changing rate');
   });
 });
