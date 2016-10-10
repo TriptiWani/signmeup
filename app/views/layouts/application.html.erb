@@ -6,26 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%#= cloudinary_js_config %>
   </head>
 
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="/">Sign Me Up!</a>
-    </div>
-    <div class="navbar-header">
-      <%= link_to 'Speech -> Text -> Signs', root_path , :class => 'navbar-brand'%>
-      <%= link_to 'Text -> Speech', text_to_speech_path  , :class => 'navbar-brand'%>
-    </div>
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Sign Me Up!</a>
+          <%= link_to 'Speech -> Text -> Signs', speech_to_text_path , :class => 'navbar-brand'%>
+          <%= link_to 'Text -> Speech', text_to_speech_path  , :class => 'navbar-brand'%>
+      </div>
     <!-- /.navbar-header -->
-
 
     <div class="navbar-default sidebar" role="navigation">
         <div class="sidebar-nav navbar-collapse">
@@ -39,9 +35,9 @@
             </ul>
         </div>
     </div>
-</nav>
-<div class="content" style="padding-top: 20px">
-    <%= yield %>
-</div>
+  </nav>
+  <div class="content" style="padding-top: 20px">
+      <%= yield %>
+  </div>
   </body>
 </html>

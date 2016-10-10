@@ -1,6 +1,6 @@
 var currentIndex = 0;
-var words = new Array();
-var text_content = new Array();
+let words = new Array();
+let text_content = new Array();
 
 function Videos() {
 }

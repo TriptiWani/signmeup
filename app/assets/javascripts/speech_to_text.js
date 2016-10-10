@@ -2,10 +2,10 @@ var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;';
-var recognition = new SpeechRecognition();
+let grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;';
+let recognition = new SpeechRecognition();
 // console.log(recognition);
-var speechRecognitionList = new SpeechGrammarList();
+let speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 recognition.lang = 'en-US';
@@ -13,8 +13,8 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 
-var $diagnostic = $('.output');
-var $textblock = $('.text-input');
+let $diagnostic = $('.output');
+let $textblock = $('.text-input');
 
 recognition.onresult = function(event) {
   // The SpeechRecognitionEvent results property returns a SpeechRecognitionResultList object
@@ -25,13 +25,13 @@ recognition.onresult = function(event) {
   // These also have getters so they can be accessed like arrays.
   // The second [0] returns the SpeechRecognitionAlternative at position 0.
   // We then return the transcript property of the SpeechRecognitionAlternative object
-  var convertedText = event.results[0][0].transcript;
-  console.log($textblock);
-  console.log(convertedText);
+  let convertedText = event.results[0][0].transcript;
+  // console.log($textblock);
+  // console.log(convertedText);
   // $textblock.val(convertedText);
   $('.text-input').val(convertedText);
-  console.log('event' , event);
-  console.log('result', event.results[0][0]);
+  // console.log('event' , event);
+  // console.log('result', event.results[0][0]);
   // $('form').submit();
 };
 
