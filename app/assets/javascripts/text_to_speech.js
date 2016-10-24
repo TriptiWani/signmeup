@@ -1,24 +1,24 @@
-let synth = window.speechSynthesis;
+var synth = window.speechSynthesis;
 
 // var inputForm = document.querySelector('form');
-let $inputForm = $('.speech-synthesiser');
+var $inputForm = $('.speech-synthesiser');
 // var inputTxt = document.querySelector('.txt');
-let $inputTxt = $('.txt');
+var $inputTxt = $('.txt');
 // var voiceSelect = document.querySelector('select');
-let $voiceSelect = $('.languages');
-let $selectedOption = $('.languages option');
+var $voiceSelect = $('.languages');
+var $selectedOption = $('.languages option');
 
 
 // var pitch = document.querySelector('#pitch');
-let $pitch = $('#pitch');
-// let pitchValue = document.querySelector('.pitch-value');
-let $pitchValue = $('.pitch-value');
-// let rate = document.querySelector('#rate');
-let $rate = $('#rate');
-// let rateValue = document.querySelector('.rate-value');
-let $rateValue = $('.rate-value');
+var $pitch = $('#pitch');
+// var pitchValue = document.querySelector('.pitch-value');
+var $pitchValue = $('.pitch-value');
+// var rate = document.querySelector('#rate');
+var $rate = $('#rate');
+// var rateValue = document.querySelector('.rate-value');
+var $rateValue = $('.rate-value');
 
-let voices = [];
+var voices = [];
 
 function populateVoiceList() {
   voices = synth.getVoices();
@@ -26,7 +26,7 @@ function populateVoiceList() {
 
   for(i = 0; i < voices.length ; i++) {
     // var option = document.createElement('option');
-    let $option = $('.languages option');
+    var $option = $('.languages option');
     $option.html(voices[i].name + ' (' + voices[i].lang + ')');
 
     if(voices[i].default) {

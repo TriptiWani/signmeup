@@ -6,10 +6,10 @@ function Videos() {
 }
 Videos.getPath = function(word) {
     return '/videos/' + word + '.MP4';
-}
+};
 
 Videos.play = function() {
-    videoPlayer = document.getElementById("videoPlayer")
+    videoPlayer = document.getElementById("videoPlayer");
     // remove the event listener, if there is one
     videoPlayer.removeEventListener('ended',Videos.play,false);
 
@@ -26,7 +26,7 @@ Videos.play = function() {
         // add an event listener so when the video ends it will call the Videos.play function again
         videoPlayer.addEventListener('ended', Videos.play,false);
     }
-}
+};
 //hello my name is Sarah
 //how are you
 //do you need a doctor

@@ -3,7 +3,8 @@ $(document).ready(function(){
   $('.speak-button').on('click',function(){
     // console.log('clicked speak');
     recognition.start();
-    // console.log(' am here');
+      // Videos.play();
+      // console.log(' am here');
   });
 
   $('.video').hide();
@@ -11,7 +12,7 @@ $(document).ready(function(){
   $('.speech-recognition').submit(function(e) {
       e.preventDefault();
       $('.video').show();
-      const search = $('[name="search"]').val().toLowerCase();
+      var search = $('[name="search"]').val().toLowerCase();
       // var search = $('[name="search"]').val().toLowerCase();
       currentIndex = 0;
       // words = search.split(" ").filter(key => dic.indexOf(key) >= 0);
@@ -38,8 +39,8 @@ $(document).ready(function(){
     // });
   $('.text-to-speech').on('click',function(event) {
     event.preventDefault();
-    let utterThis = new SpeechSynthesisUtterance( $('.txt').val());
-    let selectedOption = $selectedOption.first().attr('data-name');
+    var utterThis = new SpeechSynthesisUtterance( $('.txt').val());
+    var selectedOption = $selectedOption.first().attr('data-name');
     for(i = 0; i < voices.length ; i++) {
       if(voices[i].name === selectedOption) {
         utterThis.voice = voices[i];
@@ -50,9 +51,9 @@ $(document).ready(function(){
     synth.speak(utterThis);
 
     utterThis.onpause = function(event) {
-      let char = event.utterance.text.charAt(event.charIndex);
+      var char = event.utterance.text.charAt(event.charIndex);
       // console.log('Speech paused at character ' + event.charIndex + ' of "' + event.utterance.text + '", which is "' + char + '".');
-    }
+    };
 
     $('.txt').val('');
   });
